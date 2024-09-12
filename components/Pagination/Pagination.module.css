@@ -1,0 +1,7 @@
+/* for the buttons at the end of the page */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
