@@ -1,0 +1,175 @@
+/* everything in the main should be in the center of the page */
+.main {
+  /* padding: 5em; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  flex-direction: column !important;
+  word-wrap: break-word;
+  height: 100%;
+  background-image: url(/assets/image/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.headerTxt {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.icon {
+  rotate: 90deg;
+  font-size: 1.4em;
+  animation: jumpInfinite 1.5s infinite;
+}
+/* animation that slides down and comes back */
+@keyframes jumpInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.appName {
+  font-family: "New Rocker", Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 162, 0) 5%,
+    rgb(246, 255, 0) 75%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  font-weight: 800;
+}
+.appNameTxt {
+  font-family: "New Rocker", Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 162, 0) 5%,
+    rgb(246, 255, 0) 75%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.txtWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.imageWrapper {
+  animation: float 2000ms ease-in-out infinite;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .imageBodyWrapper {
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+    height: auto;
+  }
+
+  .appNameTxt {
+    font-size: 1em;
+  }
+
+  .appName {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .card {
+    justify-content: center;
+  }
+  .cardBody {
+    flex-direction: column;
+  }
+  .btnPos {
+    margin-top: 1em;
+  }
+  .txt {
+    font-size: 1em !important;
+  }
+}
+
+.btnPos {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 10em;
+}
+.btn:hover {
+  background-color: hsl(var(--sf)) !important;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+
+.infoCard {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 10px !important;
+  width: 90%;
+}
+.cardBody {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.txt {
+  font-size: 1.5rem;
+}

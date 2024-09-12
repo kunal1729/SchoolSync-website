@@ -1,0 +1,105 @@
+.notifMain {
+  padding-inline: 2em;
+  height: 100%;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.notifProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  margin-block: 1em;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.notifDetails {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: flex-start;
+  margin-block: 0.5em;
+  gap: 0.5em;
+}
+
+.whoBox {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoName {
+  font-weight: bold;
+  color: hsl(var(--c));
+}
+.infoEmail {
+  color: hsl(var(--nc));
+}
+.infoDateTime {
+  color: hsl(var(--nc));
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.viewsWrapper {
+  color: hsl(var(--pc));
+  font-size: 0.9em;
+  text-align: center;
+}
+.viewsBtn {
+  padding: 0 1.5em;
+  border-radius: 0.4em;
+  color: hsl(var(--pc));
+  text-align: center;
+  cursor: pointer;
+}
+.viewsBtn:hover {
+  color: hsl(var(--a));
+}
+.markDownArea {
+  margin-block: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: hsl(var(--nc) / 0.1);
+  border: 1px solid hsl(var(--nc) / 0.2);
+  /* font-family: "Ubuntu", sans-serif; */
+  min-height: 50%;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5em;
+  }
+  .notifDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.1em;
+  }
+  .notifDetails > div {
+    display: none;
+  }
+  .badgeWrapper {
+    grid-column: 1 / 2;
+  }
+  .infoDateTime {
+    grid-column: 2/3;
+    text-align: right;
+  }
+  .viewsWrapper {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    text-align: right;
+  }
+  .notifMain {
+    padding: 0;
+  }
+}

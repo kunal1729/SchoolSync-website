@@ -1,0 +1,34 @@
+/* styles.module.css */
+
+.main {
+  height: 100%;
+  display: flex;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr; /* Nav and Children rows */
+  grid-template-areas: "nav" "children";
+  /* margin: 10px; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 1em;
+}
+
+.nav {
+  grid-area: nav;
+  /* Add your styles for the navbar here */
+}
+
+.childContent {
+  grid-area: children;
+  /* Add your styles for the children pages here */
+  margin-block: 10px;
+  margin-inline: 5px;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 0.5em;
+  }
+}

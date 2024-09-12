@@ -1,0 +1,53 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "log": "git log --pretty=format:\"%C(bold red)%h %C(blue)%d %C(green)%an %C(ul white)%s\" --decorate --graph"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/next-js": "^2.1.4",
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@react-spring/parallax": "^9.7.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@supabase/auth-helpers-nextjs": "^0.7.2",
+    "@supabase/supabase-js": "^2.26.0",
+    "chakra-ui-markdown-renderer": "^4.1.0",
+    "classnames": "^2.3.2",
+    "dotenv": "^16.4.5",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.8",
+    "formidable": "^3.5.0",
+    "framer-motion": "^10.15.0",
+    "md5": "^2.3.0",
+    "mongodb": "^5.9.2",
+    "multer": "^1.4.5-lts.1",
+    "next": "^13.5.6",
+    "next-auth": "^4.22.1",
+    "nextjs-google-analytics": "^2.3.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-markdown": "^8.0.7",
+    "react-redux": "^8.1.1",
+    "remark-gfm": "^3.0.1",
+    "sharp": "^0.32.3",
+    "swr": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/busboy": "^1.5.0",
+    "@types/formidable": "^3.4.0",
+    "@types/md5": "^2.3.2",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "typescript": "^5.1.6"
+  }
+}

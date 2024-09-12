@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  background-image: url(/assets/image/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fillForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(var(--nc) / 50%);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 80%;
+  min-width: 40%;
+  min-height: 40%;
+}
+.fillForm label {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+.fillForm p {
+  margin-bottom: 1px;
+  margin-top: 10px;
+}
+.fillForm input {
+  /* background-color: hsl(var(--b3)); */
+  color: whitesmoke;
+
+  padding: 30px;
+  width: 100%;
+  font-size: 20px;
+  height: 4rem;
+}
+.fillForm input:focus {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.submitBtn {
+  background-color: hsl(var(--s)) !important;
+  color: white;
+  border: transparent;
+  border-radius: 10px;
+  padding: 15px;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.submitBtn:hover {
+  background-color: hsl(var(--sf)) !important;
+}
+.submitBtn:active {
+  scale: 0.9;
+}

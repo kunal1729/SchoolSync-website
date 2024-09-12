@@ -1,0 +1,49 @@
+.greeting {
+  font-size: 1.3em;
+}
+.name {
+  font-weight: bold;
+  color: #ffcc00; /* Gryffindor house color */
+  /* font-size: 25px; */
+}
+
+/* For LUMOS */
+.glowingText {
+  /* font-size: 25px; */
+  animation: glowingAnimation 2s ease-in-out infinite;
+}
+@keyframes glowingAnimation {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 5px #ffcc00; /* Gryffindor house color */
+  }
+  50% {
+    color: #ffcc00; /* Gryffindor house color */
+    text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00; /* Increase the glow */
+  }
+  100% {
+    color: #fff;
+    text-shadow: 0 0 5px #ffcc00; /* Gryffindor house color */
+  }
+}
+
+.appName {
+  /* font-size: 25px; */
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 1) 5%,
+    rgba(255, 0, 255, 1) 75%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* for notifications */
+.notifications {
+  display: flex;
+  width: 100%;
+  margin: 0.5em 0;
+}
