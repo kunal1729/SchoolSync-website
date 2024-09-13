@@ -88,7 +88,7 @@ export const authOptions = {
         session.user.role = role;
         return session;
       } catch (error) {
-        console.error("Error in session callback:", error.message);
+        console.error("Error in session callback:", error);
         return null; // Return a null session if something fails
       }
     },
