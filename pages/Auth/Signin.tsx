@@ -6,7 +6,8 @@ import type {
 import { getCsrfToken } from "next-auth/react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useState } from "react"; import {
+import { useState } from "react";
+import {
   Button,
   Flex,
   Input,
@@ -61,11 +62,9 @@ export default function SignIn({
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    // main container of the form
     <div className={styles.container}>
       <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
 
-      {/* text input part */}
       <div className={styles.fillForm}>
         <label>
           <p>Email</p>
@@ -108,37 +107,46 @@ export default function SignIn({
           </InputGroup>
         </label>
 
-        {/* end button part */}
-
         <Button
           isLoading={isLoading}
           className={classNames(styles.submitBtn, "clicky")}
           onClick={async () => {
             setIsLoading(true);
-            const res = await signIn("credentials", {
-              email,
-              password,
-              redirect: false,
-            });
+            try {
+              const res = await signIn("credentials", {
+                email,
+                password,
+                redirect: false,
+              });
 
-            console.log("Printing result: ", res);
+              console.log("Printing result: ", res);
 
-            if (res?.status !== 200) {
+              if (res?.status !== 200) {
+                toast({
+                  title: "Wrong Email Or Password ",
+                  status: "error",
+                  duration: 5000,
+                  isClosable: true,
+                });
+              } else {
+                router.push("/");
+              }
+            } catch (error) {
+              console.error("Sign-in error:", error);
               toast({
-                title: "Wrong Email Or Password ",
+                title: "An error occurred during sign-in",
                 status: "error",
                 duration: 5000,
                 isClosable: true,
               });
-            } else {
-              router.push("/");
+            } finally {
+              setIsLoading(false);
             }
-            setIsLoading(false);
-
           }}
         >
           Sign in
         </Button>
+
         <p>Click one of the 3 buttons below for free access :</p>
         <Flex gap={4}>
           <AutoPassBtn
@@ -166,9 +174,18 @@ export default function SignIn({
 }
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  return {
-    props: {
-      csrfToken: await getCsrfToken(context) ?? undefined,
-    },
-  };
+  try {
+    return {
+      props: {
+        csrfToken: await getCsrfToken(context) ?? undefined,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching CSRF token:", error);
+    return {
+      props: {
+        csrfToken: undefined,
+      },
+    };
+  }
 }

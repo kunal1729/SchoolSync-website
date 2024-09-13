@@ -3,6 +3,11 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
+  "/Auth/Signin": "pages/Auth/Signin.js",
+  "/Faculty/Dashboard": "pages/Faculty/Dashboard.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/Auth/Signin": "pages/Auth/Signin.js"
+  "/api/getJoke": "pages/api/getJoke.js",
+  "/api/user": "pages/api/user.js",
+  "/Admin/Dashboard": "pages/Admin/Dashboard.js",
+  "/api/notification": "pages/api/notification.js"
 }

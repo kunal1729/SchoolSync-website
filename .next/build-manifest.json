@@ -17,10 +17,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
+    "/Admin/Dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Admin/Dashboard.js"
+    ],
     "/Auth/Signin": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Auth/Signin.js"
+    ],
+    "/Faculty/Dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Faculty/Dashboard.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
