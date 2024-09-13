@@ -21,7 +21,7 @@ export default function AppTitle({ sizeNumber }: { sizeNumber?: number }) {
           router.push(`/${session?.user.role}/Dashboard`);
         }}
       >
-        Enchanted Oasis
+        School Sync
       </button>
     </div>
   );
