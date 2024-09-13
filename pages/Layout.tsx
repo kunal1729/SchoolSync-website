@@ -56,7 +56,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Head>
-        <title>Enchanted Oasis</title>
+        <title>School Sync</title>
         <meta name="description" content="Cool! " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
