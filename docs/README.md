@@ -1,4 +1,4 @@
-# Hogwarts School portal
+# School Management portal
 
 Hogwarts faces a noticeable absence of a dedicated online portal that allows students to immerse themselves in the magical experience fully. As a result, there is a pressing need for participants to create a website that serves as a comprehensive gateway to Hogwarts.🏰🧙‍♂️
 
