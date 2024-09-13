@@ -25,7 +25,7 @@ async function GET(
   res: NextApiResponse,
   session: MySession
 ) {
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const usersCollection = db.collection<UserCol>("Users");
   const pipeline = [
     { $match: { _id: session?.user.id } }, // Match the user ID

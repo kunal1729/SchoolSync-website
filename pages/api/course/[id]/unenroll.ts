@@ -35,7 +35,7 @@ async function DELETE(
   }
 
   const client = await clientPromise;
-  const db = client.db("enchanted-oasis");
+  const db = client.db("School_App");
   const courseCol = db.collection<CourseCol>("Courses");
   const updateResponse = await courseCol.updateOne(
     { _id: new ObjectId(id) },

@@ -55,7 +55,7 @@ async function POST(
     return res.status(400).send("Missing courseId");
   }
 
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const coursesCollection = db.collection<CourseCol>("Courses");
   const filter = { _id: new ObjectId(courseId) }; // Filter to identify the document to update
   let update;
@@ -166,7 +166,7 @@ async function GET(
       },
     },
   ];
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const coursesCollection = db.collection<CourseCol>("Courses");
 
   const members = await coursesCollection

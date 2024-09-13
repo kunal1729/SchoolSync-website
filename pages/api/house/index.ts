@@ -44,7 +44,7 @@ async function POST(
     _id: new ObjectId(),
   };
 
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const housesCollection = db.collection<HouseCol>("Houses");
 
   const insertResponse = await housesCollection.insertOne(house);

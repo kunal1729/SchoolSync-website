@@ -44,7 +44,7 @@ async function DELETE(req: NextApiRequest, res: NextApiResponse, session: any) {
   if (session.user.role === "Faculty" && memberType === "faculty") {
     return res.status(403).send("A Faculty can not remove another faculty");
   }
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const coursesCollection = db.collection("Courses");
   const filter = { _id: new ObjectId(courseId) }; // Filter to identify the document to update
   const arrayField = memberType === "student" ? "students" : "faculties";

@@ -2,7 +2,18 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Auth/Signin": "pages/Auth/Signin.js",
+  "/Everyone/Houses": "pages/Everyone/Houses.js",
   "/Admin/Dashboard": "pages/Admin/Dashboard.js",
-  "/Faculty/Dashboard": "pages/Faculty/Dashboard.js"
+  "/api/getJoke": "pages/api/getJoke.js",
+  "/api/notification": "pages/api/notification.js",
+  "/api/user": "pages/api/user.js",
+  "/api/notification/[notificationId]/listViewers": "pages/api/notification/[notificationId]/listViewers.js",
+  "/Admin/Users": "pages/Admin/Users.js",
+  "/api/allUsers/search": "pages/api/allUsers/search.js",
+  "/Admin/Courses": "pages/Admin/Courses.js",
+  "/api/course/list": "pages/api/course/list.js",
+  "/api/house/[id]": "pages/api/house/[id].js",
+  "/api/house/[id]/searchMembers": "pages/api/house/[id]/searchMembers.js",
+  "/Everyone/Houses/[houseName]": "pages/Everyone/Houses/[houseName].js",
+  "/api/house/list": "pages/api/house/list.js"
 }

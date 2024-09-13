@@ -35,7 +35,7 @@ async function GET(
   if (!id) {
     return res.status(400).send("Missing query parameter: id");
   }
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const usersCollection = db.collection<HouseCol>("Users");
   const housesCollection = db.collection<HouseCol>("Houses");
   const house = await housesCollection.findOne({

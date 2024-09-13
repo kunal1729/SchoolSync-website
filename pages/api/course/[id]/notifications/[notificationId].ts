@@ -38,7 +38,7 @@ async function DELETE(
     return res.status(403).send("Not an Faculty");
   }
 
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const courseNotifCollection = db.collection<CourseNotifCol>(
     "CourseNotifications"
   );
@@ -60,7 +60,7 @@ async function GET(
     return res.status(403).send("Not an Faculty or Student");
   }
 
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const courseNotifCollection = db.collection<CourseNotifCol>(
     "CourseNotifications"
   );

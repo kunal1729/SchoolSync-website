@@ -56,7 +56,7 @@ async function POST(
     }
   }
 
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const courseNotifCollection = db.collection<CourseNotifCol>(
     "CourseNotifications"
   );
@@ -89,7 +89,7 @@ async function GET(
     ? (req.query.searchQuery as string)
     : "";
   const searchRegex = new RegExp(searchQuery, "i");
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const courseNotifCollection = db.collection<CourseNotifCol>(
     "CourseNotifications"
   );

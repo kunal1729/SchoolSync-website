@@ -38,7 +38,7 @@ async function PUT(
       .status(400)
       .send("Provide oldPassword and newPassword in the body");
   }
-  const db = (await clientPromise).db("enchanted-oasis");
+  const db = (await clientPromise).db("School_App");
   const usersCollection = db.collection<UserCol>("Users");
 
   const id = session.user.id;
