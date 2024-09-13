@@ -3,17 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/Auth/Signin": "pages/Auth/Signin.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/Admin/Dashboard": "pages/Admin/Dashboard.js",
-  "/api/user": "pages/api/user.js",
-  "/api/getJoke": "pages/api/getJoke.js",
-  "/api/notification/[notificationId]/listViewers": "pages/api/notification/[notificationId]/listViewers.js",
-  "/api/notification": "pages/api/notification.js",
-  "/Admin/Users": "pages/Admin/Users.js",
-  "/api/allUsers/search": "pages/api/allUsers/search.js",
-  "/Everyone/Houses": "pages/Everyone/Houses.js",
-  "/api/house/list": "pages/api/house/list.js",
-  "/Admin/Courses": "pages/Admin/Courses.js",
-  "/api/course/list": "pages/api/course/list.js"
+  "/Auth/Signin": "pages/Auth/Signin.js"
 }
