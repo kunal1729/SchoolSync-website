@@ -15,13 +15,15 @@ export async function validateLogin(
   usersCollection: Collection<UserCol>
 ) {
   const user = await usersCollection.findOne({ email: email });
-  console.log(user);
-
-  const passwordHash = md5(password);
+  
   if (!user) {
+    console.log("User not found with email:", email);
     return null;
   }
+  
+  const passwordHash = md5(password);
   if (user.passwordHash !== passwordHash) {
+    console.log("Password mismatch for user:", email);
     return null;
   }
 
@@ -38,8 +40,13 @@ export async function getRoleAndId(
 ) {
   const user = await usersCollection.findOne({ email: email });
 
-  const role = user?.role;
-  const id = user?._id;
+  if (!user) {
+    console.log("User not found for role and id with email:", email);
+    return { role: null, id: null };
+  }
+
+  const role = user.role;
+  const id = user._id;
 
   return { role, id };
 }

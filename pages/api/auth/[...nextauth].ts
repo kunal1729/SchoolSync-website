@@ -69,21 +69,27 @@ export const authOptions = {
       user: any;
     }) {
       try {
+        console.log("Session started for user:", session.user.email);
         const usersCollection = (await clientPromise)
           .db("School_App")
           .collection<UserCol>("Users");
-
+  
         const { role, id } = await getRoleAndId(
           session.user.email,
           usersCollection
         );
-
+  
+        if (!role || !id) {
+          console.error("Failed to find role or id for session:", session.user.email);
+          throw new Error("Role or ID not found");
+        }
+  
         session.user.id = id;
         session.user.role = role;
         return session;
       } catch (error) {
-        console.error("Error in session callback:", error);
-        throw new Error("Session callback failed");
+        console.error("Error in session callback:", error.message);
+        return null; // Return a null session if something fails
       }
     },
   },
